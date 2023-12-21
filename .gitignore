@@ -1,0 +1,7 @@
+datasets
+files_to_be_compressed
+__pycache__
+compressed
+Images
+log
+!log/trained_models.zip
