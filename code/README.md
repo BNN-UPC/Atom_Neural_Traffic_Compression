@@ -34,7 +34,7 @@ The following steps indicate how to download and process the datasets from sourc
 ### Instructions to download and process the campus network dataset
 The following steps indicate how to download the campus network dataset and how to process it.
 
-1. To prepare the campus network datasets, we only need to download it from [https://drive.google.com/file/d/1u6lmxAGGQr7h1lCKhxGScJ5Bu7aJkj5j/view?usp=sharing](https://drive.google.com/file/d/1u6lmxAGGQr7h1lCKhxGScJ5Bu7aJkj5j/view?usp=sharing) and unzip it in the "./data/datasets" directory.  
+1. To prepare the campus network datasets, we only need to download it from [https://drive.google.com/file/d/1u6lmxAGGQr7h1lCKhxGScJ5Bu7aJkj5j/view?usp=sharing](https://drive.google.com/file/d/1u6lmxAGGQr7h1lCKhxGScJ5Bu7aJkj5j/view?usp=sharing) or [https://bnn.upc.edu/download/atom_campus_network_dataset/](https://bnn.upc.edu/download/atom_campus_network_dataset/) and unzip them in the "./data/datasets" directory.  
 
 2. Then, we need to execute the following script to convert the csv to the desired tfrecords. At the top of the script, there is a variable flag_Kb to indicate if we use the raw dataset or we convert it to Kbytes. If we are working with raw dataset, we won't be able to compress/decompress as the range of link utilization values is very large and it doesn't fit in memory when computing the probability distribution. That's why it's interesting to have the flag flag_Kb set to True. Please be aware that this script can take several hours to finish executing. In the next step we indicate how to train and compress using the already-processed datasets used in the paper.
 
@@ -43,7 +43,7 @@ data$: python convert_data_real_world_campus.py -r 20
 ```
 
 ### Preparing the datasets used in the paper
-To avoid processing the entire datasets, we also provide the already-processed datasets used in our paper. These can be found in [https://drive.google.com/file/d/1CF8og3RKeE4jkT79Q8iD68ra-06ZxtMN/view?usp=sharing](https://drive.google.com/file/d/1CF8og3RKeE4jkT79Q8iD68ra-06ZxtMN/view?usp=sharing) and they should be unzipped and moved to "./data/files_to_be_compressed/tfrecords".
+To avoid processing the entire datasets, we also provide the already-processed datasets used in our paper. These can be found in [https://drive.google.com/file/d/1CF8og3RKeE4jkT79Q8iD68ra-06ZxtMN/view?usp=sharing](https://drive.google.com/file/d/1CF8og3RKeE4jkT79Q8iD68ra-06ZxtMN/view?usp=sharing) or [https://bnn.upc.edu/download/atom_processed_datasets/](https://bnn.upc.edu/download/atom_processed_datasets/) and they should be unzipped and moved to "./data/files_to_be_compressed/tfrecords".
 
 ## Training the models
 To execute the following scripts to train the models, we should do it from the "code" directory. 
